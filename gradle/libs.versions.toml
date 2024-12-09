@@ -1,0 +1,56 @@
+[versions]
+agp = "8.1.2"
+kotlin = "1.9.20"
+compose-plugin = "1.5.11"
+compose-compiler = "1.5.4"
+koinCompose="1.2.0-Beta4"
+ktor = "2.3.7"
+koin = "3.5.0"
+kamel = "0.8.3"
+mokoMvvm = "0.16.1"
+coroutines = "1.7.3"
+voyager = "1.0.0-rc10"
+datastore = "1.1.1"
+activity-compose = "1.8.0"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+
+kamel = { module = "media.kamel:kamel-image", version.ref = "kamel" }
+moko-mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mokoMvvm" }
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-composeVM = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinCompose" }
+koin-compose = {module="io.insert-koin:koin-compose", version.ref = "koinCompose"}
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-serialization = {module = "io.ktor:ktor-serialization-kotlinx-json", version.ref="ktor"}
+ktor-client-content-negotiation = {module = "io.ktor:ktor-client-content-negotiation", version.ref= "ktor"}
+
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-cio= {module ="io.ktor:ktor-client-cio", version.ref = "ktor"}
+
+datastore-pref = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore"}
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastore"}
+datastore-pref-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore" }
+
+[bundles]
+ktor = ["ktor-client-core", "ktor-client-content-negotiation"]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
